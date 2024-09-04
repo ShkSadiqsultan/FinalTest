@@ -7,13 +7,13 @@ public class ValueTypeCollection<T> where T : struct
         _collection.Add(item);
     }
 
-    public T GetItem(int index)
+    public T GetItem(int i)
     {
-        if (index < 0 || index >= _collection.Count)
+        if (index < 0 || i >= _collection.Count)
         {
-            throw new ArgumentOutOfRangeException(nameof(index));
+            throw new ArgumentOutOfRangeException(nameof(i));
         }
-        return _collection[index];
+        return _collection[i];
     }
 
     public List<T> GetSortedCollection()
