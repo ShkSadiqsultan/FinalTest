@@ -9,7 +9,7 @@ public class ValueTypeCollection<T> where T : struct
 
     public T GetItem(int i)
     {
-        if (index < 0 || i >= _collection.Count)
+        if (i < 0 || i >= _collection.Count)
         {
             throw new ArgumentOutOfRangeException(nameof(i));
         }
